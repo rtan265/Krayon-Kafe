@@ -8,14 +8,17 @@
     />
     <meta name="description" content="" />
     <title>Krayon Kafe</title>
-
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
   </head>
   <body data-gr-c-s-loaded="true">
-    <main role="main">
-      <div class="container">
+    <main role="main" class="background">
+      <div class="logo">KAFE KRAYON</div> <!--Replace with logo-->
+      <div class="container search">
         <p><%- include('../partials/search') %></p>
+      </div>
+      <div class="container map">
         <p><%- include('../partials/map') %></p>
         <ul>
           <% locationData.forEach(function(location) { %>
