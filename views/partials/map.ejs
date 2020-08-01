@@ -1,1 +1,32 @@
-maps
+<!--The div element for the map -->
+<div id="map"></div>
+<script>
+
+function initMap() {
+    var auckland = {lat: -36.848, lng: 174.762};
+
+    var locations = [];
+    <% coordinates.forEach(function(coordinate) { %>
+        locations.push([ <%= coordinate.lat %>, <%= coordinate.long %>]);
+    <% }); %>
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(auckland),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+        map: map
+      });
+    };
+    google.maps.event.addDomListener(window, 'load', initMap);
+}
+
+</script>
