@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Krayon Kafe</title>
+  </head>
+  <body>
+      <h1>Welcome to Krayon Kafe!</h1>
+      <!-- <p><%= tagline %></p> -->
+      <ul>
+        <% drinks.forEach(function(drink) { %>
+            <li><%= drink.name %> - <%= drink.drunkness %></li>
+        <% }); %>
+    </ul>
+  </body>
+</html>
