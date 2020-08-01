@@ -1,79 +1,38 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
-<head>
-  <!-- Mobile Specific Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Favicon-->
-  <link rel="shortcut icon" href="img/fav.png">
-  <!-- Author Meta -->
-  <meta name="author" content="codepixer">
-  <!-- Meta Description -->
-  <meta name="description" content="">
-  <!-- Meta Keyword -->
-  <meta name="keywords" content="">
-  <!-- meta character set -->
-  <meta charset="UTF-8">
-  <!-- Site Title -->
-  <title>Krayon Kafe</title>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>Krayon Kafe</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-    <!--
-    CSS
-    ============================================= -->
-    <link rel="stylesheet" href="css/linearicons.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/nice-select.css">					
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
   </head>
-  <body>		  	
-    <section class="banner-area" id="home">	
-      <div class="container">
-        <div class="row fullscreen d-flex align-items-center justify-content-start">
-          <div class="banner-content col-lg-7">
-            <h6 class="text-white text-uppercase">Now you can feel the Energy</h6>
-            <h1>
-              Welcome to <br> Krayon Kafe!				
-            </h1>
-          </div>											
-        </div>
-      </div>
-    </section>
-    
-    <section class="pb-100 pt-40" id="about">
+  <body data-gr-c-s-loaded="true">
+    <main role="main">
       <div class="container">
         <p><%- include('../partials/search') %></p>
         <p><%- include('../partials/map') %></p>
         <ul>
-            <% drinks.forEach(function(drink) { %>
-                <li><%= drink.name %> - <%= drink.drunkness %></li>
-            <% }); %>
+          <% drinks.forEach(function(drink) { %>
+          <li><%= drink.name %> - <%= drink.drunkness %></li>
+          <% }); %>
         </ul>
-      </div>	
-    </section>
-    
-    <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>			
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-      <script src="js/easing.min.js"></script>			
-    <script src="js/hoverIntent.js"></script>
-    <script src="js/superfish.min.js"></script>	
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>	
-    <script src="js/owl.carousel.min.js"></script>			
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>			
-    <script src="js/parallax.min.js"></script>	
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>					
-    <script src="js/mail-script.js"></script>	
-    <script src="js/main.js"></script>	
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/vendor/jquery.slim.min.js"><\/script>');
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
-
-
