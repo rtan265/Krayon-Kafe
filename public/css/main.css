@@ -1,0 +1,32 @@
+.background {
+  background: url("../img/header-bg.jpg") center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo {
+  position:absolute;
+  padding: 1em 0em 1em 3em;
+  font-size: 2em;
+  font-weight: 500;
+  color: #ffffff;
+  left:0;
+  top:0;
+}
+
+.search {
+  padding-top: 10em;
+  width: 80%;
+}
+
+.map{
+  padding-top: 1em;
+  width: 80%;
+}
+
+.container p, .container ul {
+  color: #ffffff;
+}
+
+
+
