@@ -19,7 +19,7 @@
         <p><%- include('../partials/map') %></p>
         <ul>
           <% locationData.forEach(function(location) { %>
-          <li><%= location.latitude %> - <%= location.longitude %></li>
+          <li><%= location.name %> at Latitude: <%= location.latitude %>, Longitude: <%= location.longitude %></li>
           <% }); %>
         </ul>
       </div>

@@ -42,13 +42,14 @@ app.get('/', function(req, res) {
 
       let locationData = [];
       for (let i = 0; i < entries2.length; i++) {
+        let cafeName = entries2[i].name;
         let lat = entries2[i].latitude;
         let long = entries2[i].longitude;
-        let entry = { latitude: lat, longitude: long };
+        let entry = { name: cafeName, latitude: lat, longitude: long };
         locationData.push(entry);
       }
       console.log(locationData);
-      res.render('pages/index', {locationData: locationData});
+      res.render('pages/index', { locationData: locationData });
     });
 });
 
