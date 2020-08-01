@@ -7,6 +7,9 @@
   <body>
       <h1>Welcome to Krayon Kafe!</h1>
       <!-- <p><%= tagline %></p> -->
+
+      <p><%- include('../partials/search') %></p>
+      <p><%- include('../partials/map') %></p>
       <ul>
         <% drinks.forEach(function(drink) { %>
             <li><%= drink.name %> - <%= drink.drunkness %></li>
