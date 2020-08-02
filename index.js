@@ -55,7 +55,7 @@ app.get("/", function (req, res) {
     });
 });
 
-app.post("/submit-student-data", urlencodedparser, function (req, res) {
+app.post("/submit", urlencodedparser, function (req, res) {
   let body = "";
   console.log("Result", req.body.location);
 
