@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>Krayon Kafe</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body data-gr-c-s-loaded="true">
+    <main role="main" class="background">
+      <div class="logo">KAFE KRAYON</div> <!--Replace with logo-->
+      <div class="container">
+        <div class="row">
+      <div class="search col-12">
+        <p><%- include('../partials/search') %></p>
+      </div>
+      <div class="map col-12">
+        <p><%- include('../partials/map') %></p>
+      </div>
+    </div>
+  </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+<<<<<<< HEAD
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8Y9nxvaB_7U05Lof9Q_SHrt-URHD8WCQ&callback=initMap">
+    </script>
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+>>>>>>> 5e57186... add search post method
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/vendor/jquery.slim.min.js"><\/script>');
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
