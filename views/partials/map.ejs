@@ -6,7 +6,7 @@ function initMap() {
 
     var locations = [];
     <% locationData.forEach(function(location) { %>
-        locations.push(["<%= location.name %>", <%= location.lat %>, <%= location.long %>]);
+        locations.push(["<%= location.name %>", <%= location.lat %>, <%= location.long %>, "<%= location.address %>"]);
     <% }); %>
 
     var auckland = {lat: locations[0][1], lng: locations[0][2]};
@@ -26,8 +26,11 @@ function initMap() {
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
       });
+      console.log(locations[i], 'address');
 
-      infowindow = new google.maps.InfoWindow({content: marker.title});
+      // content = "<p>" + marker.title + "</p> <p>" + locations[i][3] + "</p>";
+
+      infowindow = new google.maps.InfoWindow({content: marker.title + " @ " + locations[i][3]});
 
       bindInfoWindow(marker, map, infowindow);
     };
