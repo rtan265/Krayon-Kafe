@@ -81,10 +81,19 @@ app.post("/submit-student-data", urlencodedparser, function (req, res) {
       let locationData = [];
       for (let i = 0; i < entries2.length; i++) {
         let cafeName = entries2[i].name;
+        let open = entries2[i].open == "" ? "Unavailable" : entries2[i].open;
+        let address = entries2[i].address;
         let lat = entries2[i].latitude;
         let long = entries2[i].longitude;
-        let entry = { name: cafeName, lat: lat, long: long };
+        let entry = {
+          name: cafeName,
+          open: open,
+          address: address,
+          lat: lat,
+          long: long,
+        };
         locationData.push(entry);
+        console.log(locationData);
       }
       res.render("pages/index", { locationData: locationData });
     });
