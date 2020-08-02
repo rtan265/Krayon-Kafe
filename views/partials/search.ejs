@@ -7,62 +7,69 @@
 
   <body>
     <div class="header">
-      <form>
+      <form method="post" action="/submit-student-data">
         <h1>Find A Location</h1>
-        <div class="container">
-          <div class="row">
-            <div class="col-3">
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Currency
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle btn-block"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Currency
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </div>
-            <div class="col-3">
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Location
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Budget"
-                aria-label="budget"
-              />
-            </div>
-            <div class="col-3">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </div>
+          </div>
+          <div class="col-3">
+            <input
+              name="location"
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Location"
+              aria-label="budget"
+            />
+          </div>
+
+          <div class="col-3">
+            <input
+              name="budget"
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Budget"
+              aria-label="budget"
+            />
+          </div>
+          <div class="col-3">
+            <button action="/submit-student-data" method="post" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
           </div>
         </div>
       </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script>
+      function submitData() {
+        console.log("Start submitting");
+        $.ajax({
+          url: "/submit-student-data",
+          type: "post",
+          dataType: "text",
+          async: false,
+          success: function (result) {
+            console.log(result);
+          },
+        });
+      }
+    </script> -->
   </body>
 </html>
