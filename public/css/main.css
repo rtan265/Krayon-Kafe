@@ -21,7 +21,12 @@
 
 .map{
   padding-top: 1em;
-  width: 80%;
+  min-height: 500px;
+}
+
+#map{
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .container p, .container ul {

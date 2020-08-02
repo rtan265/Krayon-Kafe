@@ -3,15 +3,16 @@
 <script>
 
 function initMap() {
-    var auckland = {lat: -36.848, lng: 174.762};
 
     var locations = [];
     <% locationData.forEach(function(location) { %>
         locations.push(["<%= location.name %>", <%= location.lat %>, <%= location.long %>]);
     <% }); %>
 
+    var auckland = {lat: locations[0][1], lng: locations[0][2]};
+
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
+      zoom: 17,
       center: new google.maps.LatLng(auckland),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
