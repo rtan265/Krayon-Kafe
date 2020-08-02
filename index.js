@@ -83,7 +83,7 @@ app.post("/submit-student-data", urlencodedparser, function (req, res) {
         let cafeName = entries2[i].name;
         let lat = entries2[i].latitude;
         let long = entries2[i].longitude;
-        let entry = { name: cafeName, latitude: lat, longitude: long };
+        let entry = { name: cafeName, lat: lat, long: long };
         locationData.push(entry);
       }
       res.render("pages/index", { locationData: locationData });
