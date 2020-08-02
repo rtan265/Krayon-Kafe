@@ -17,17 +17,32 @@ function initMap() {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-    var infowindow = new google.maps.InfoWindow();
-
     var marker, i;
 
+    var infowindow;
     for (i = 0; i < locations.length; i++) {  
       marker = new google.maps.Marker({
+        title: locations[i][0],
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
       });
+
+      infowindow = new google.maps.InfoWindow({content: marker.title});
+
+      bindInfoWindow(marker, map, infowindow);
     };
-    google.maps.event.addDomListener(window, 'load', initMap);
-}
+
+    function bindInfoWindow(marker, map, infowindow) { 
+      google.maps.event.addListener(marker, 'mouseover', function() { 
+        infowindow.open(map, marker); 
+      }); 
+
+      google.maps.event.addListener(marker, 'mouseout', function() {
+  	    infowindow.close();
+      });
+    }; 
+  google.maps.event.addDomListener(window, 'load', initMap);
+
+};
 
 </script>
