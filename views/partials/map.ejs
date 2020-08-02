@@ -6,8 +6,8 @@ function initMap() {
     var auckland = {lat: -36.848, lng: 174.762};
 
     var locations = [];
-    <% coordinates.forEach(function(coordinate) { %>
-        locations.push([ <%= coordinate.lat %>, <%= coordinate.long %>]);
+    <% locationData.forEach(function(location) { %>
+        locations.push(["<%= location.name %>", <%= location.lat %>, <%= location.long %>]);
     <% }); %>
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -22,7 +22,7 @@ function initMap() {
 
     for (i = 0; i < locations.length; i++) {  
       marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
       });
     };
