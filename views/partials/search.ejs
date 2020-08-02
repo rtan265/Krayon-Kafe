@@ -1,1 +1,68 @@
-search
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SearchBar Partial</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="header">
+      <form>
+        <h1>Find A Location</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Currency
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Location
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Budget"
+                aria-label="budget"
+              />
+            </div>
+            <div class="col-3">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
