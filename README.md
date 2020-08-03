@@ -13,25 +13,43 @@ We were able to deploy our website to Heroku with the help our our great mentor 
 ![Website Photo](./readmeImages/websiteOnHeroku.PNG)  
 
 # Installation 
+To get this website working on your local machine, first clone the repository. Using Visual Studio Code, open up a terminal and do the following:  
+```
+$ cd team_krayon
+$ npm install express --save 
+$ node index.js 
+```  
+** Note: You may need to generate your own Google Maps API key to get it working on your machine. As of 03/08/2020, it should still work on your local machine. You can change this in the ```views/pages/index.ejs``` file.**
+
+# Tech Stack used:
+### Languages/Frameworks used:  
+Mainly HTML, CSS and JavaScript.  
+In addition to JavaScript, we also used several other frameworks/libraries: [jQuery](https://jquery.com/), [Bootstrap](https://getbootstrap.com/), [Node](https://nodejs.org/en/), [Express](https://expressjs.com/), and Axios. 
+
+### APIs used:  
+[ZenbuAPI](https://www.zenbu.co.nz/about/xml) for location data.  
+[Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview) to visually show where the location of the cafes queried are.  
+
+### Collaboration and Deployment:  
+[Github](https://github.com/) for collaboration.  
+[Heroku](https://www.heroku.com/) for deployment.  
 
 
 # Team Photos
+Here's a photo of the incredible team (and also [Trent](https://www.linkedin.com/in/trentmankelow/)):  
+![Team Photo](./readmeImages/teamPhoto.jpg)  
+![Funny Team Photo](./readmeImages/funnyTeamPhoto.jpg)
 
-# Tech Stack used
+# Contributors:
+**Developer** - [Sunny Feng](https://www.linkedin.com/in/sunnyfeng617/)    
+**Designer** - [Hwajung Jin](https://www.linkedin.com/in/hwajung-jin-7b012217b/)  
+**Developer** - [Jemimah Martinez](https://www.linkedin.com/in/jemimah-martinez-a0924a18b/)  
+**Developer** - [Ryan Tan](https://www.linkedin.com/in/rtan18/)  
+**Developer** - [Sabrina Teoh](https://www.linkedin.com/in/sabrina-teoh/)  
+**Developer** - [Martin Tiangco](https://www.linkedin.com/in/martintiangco/)  
+
+## Our wonderful mentor:  
+[Erwan Joly](https://www.linkedin.com/in/erwan-joly/)  
 
 # Thanks to:
-[]
-[]
-[]
-[]
-[]
-[]
-[]
-
-Sabrina Teoh 
-Martin Tiangco
-Jemimah 
-Hwajung Jin
-Sunny Feng
-Ryan Tan
-Erwan Joly
+Thanks to [Summer of Tech](https://summeroftech.co.nz/) for organizing Create Camp 2020, our team had a lot of fun learning new technologies and working together. We would also like to thank the sponsors [ANZ](https://www.anz.co.nz/personal/) for sponsoring the event! 
