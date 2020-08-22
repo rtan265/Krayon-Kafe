@@ -7,6 +7,8 @@ const { response } = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 
+const dotenv = require("dotenv");
+
 var parser = new xml2js.Parser();
 
 parser.on("error", function (err) {
@@ -50,14 +52,14 @@ app.get("/", function (req, res) {
         let entry = { name: cafeName, lat: lat, long: long };
         locationData.push(entry);
       }
-      console.log(locationData);
-      res.render("pages/index", { locationData: locationData });
+      // console.log(locationData);
+      res.render("pages/index", { locationData: locationData, apikey : process.env.APP_SECRET });
     });
 });
 
 app.post("/submit", urlencodedparser, function (req, res) {
   let body = "";
-  console.log("Result", req.body.location);
+  // console.log("Result", req.body.location);
 
   axios
     .get(
@@ -93,9 +95,9 @@ app.post("/submit", urlencodedparser, function (req, res) {
           long: long,
         };
         locationData.push(entry);
-        console.log(locationData);
+        // console.log(locationData);
       }
-      res.render("pages/index", { locationData: locationData });
+      res.render("pages/index", { locationData: locationData, apikey : process.env.APP_SECRET});
     });
 });
 
